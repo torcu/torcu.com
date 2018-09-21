@@ -1,0 +1,51 @@
+UPGRADING
+---------
+- If you are upgrading from version 1.3.4 or later, there is no need to reinstall the database. Just copy/replace the files.
+- If you are upgrading from an older version, you need to uninstall and reinstall the module.
+
+CHANGE NOTES
+------------
+6/5/2014 - v1.3.6
+-Bugfix: Previous release still display html entities when they come from database (e.g. City Québeq was displayed as Qu&eacute;beq)
+
+5/28/2014 - v1.3.5 
+-Improved printing html encoded symbols
+-Minor bugfixes
+
+04/19/2014 - v1.3.4
+-Feature - Labels are now sent as POST instead of GET to allow higher number of elements
+-Bugfix - allowed quotes and double quotes in labels
+-Added - {comment}, {payment_code}, {payment_method}, {shipping_code}
+
+02/14/2014 - v1.3.3
+-Bugfix - rendering labels with top/left custom margins
+-Added UPPERCASE, lowercase and Capitalised rendering, based on tag case. 
+
+01/31/2014 - v1.3.2
+-Bugfix - Unexpected T_FUNCTION in some PHP environments
+-Added force margin_right, margin_top on label sheet templates
+-Added more fonts (multilingual)
+-Added update notice when new version available
+-Tables now set as UTF8 (multilingual)
+
+11/09/2013 - v1.3.1
+-Bugfix - no delete option on saved empty labels
+
+12/09/2013 - v1.3
+-Edited compatibility chart
+-Added order weight info: {kg}, {gr}, {lb}, {oz}
+-Bugfix - when loading a saved label fill selectors showed foregorund colours.
+
+11/22/2013 - v1.2
+-Bugfix - Force cleanup headers before rendering PDF file
+-added pdf debugging params forcepdf, debugpdf
+
+10/17/2013 - v1.1
+-Added new label element: Product List
+-Fixed a bug when rendering labels calling nonexistent image, it defaults now to a generic N/A image
+-Modified system/path to avoid module collisions
+-Added new label text placeholders: "{order_id}","{store_name}", "{customer_id}", "{currency_code}","{date_added}", "{date_modified}","{date}"
+-Minor language tweaks
+
+10/04/2013 - v1.0
+Initial Release

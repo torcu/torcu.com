@@ -1,0 +1,25 @@
+<?php
+
+$files = array(
+'vqmod/xml/analytics.xml' 									=> 'DIR_APPLICATION.\'../vqmod/xml/analytics.xml\'',
+'admin/controller/module/analytics.php' 					=> 'DIR_APPLICATION.\'controller/module/analytics.php\'',
+'admin/language/english/module/analytics.php' 				=> 'DIR_APPLICATION.\'language/english/module/analytics.php\'',
+'admin/view/template/module/analytics.tpl'					=> 'DIR_APPLICATION.\'view/template/module/analytics.tpl\'',
+'admin/view/template/module/analytics_view.tpl' 			=> 'DIR_APPLICATION.\'view/template/module/analytics_view.tpl\'',
+'admin/view/template/module/analytics_help_en.tpl' 			=> 'DIR_APPLICATION.\'view/template/module/analytics_help_en.tpl\'',
+'admin/view/javascript/analytics/analytics.min.js'			=> 'DIR_APPLICATION.\'view/javascript/analytics/analytics.min.js\'',
+'admin/view/javascript/analytics/analytics.config.min.js'	=> 'DIR_APPLICATION.\'view/javascript/analytics/analytics.config.min.js\'',
+'admin/view/javascript/analytics/chosen.jquery.min.js'		=> 'DIR_APPLICATION.\'view/javascript/analytics/chosen.jquery.min.js\'',
+'admin/view/javascript/analytics/datepicker.js'				=> 'DIR_APPLICATION.\'view/javascript/analytics/datepicker.js\'',
+'admin/view/javascript/analytics/jquery.modal.min.js'		=> 'DIR_APPLICATION.\'view/javascript/analytics/jquery.modal.min.js\'',
+'admin/view/stylesheet/analytics/chosen-sprite.png'			=> 'DIR_APPLICATION.\'view/stylesheet/analytics/chosen-sprite.png\'',
+'admin/view/stylesheet/analytics/chosen-sprite@2x.png'		=> 'DIR_APPLICATION.\'view/stylesheet/analytics/chosen-sprite@2x.png\'',
+'admin/view/stylesheet/analytics/chosen.min.css'			=> 'DIR_APPLICATION.\'view/stylesheet/analytics/chosen.min.css\'',
+'admin/view/stylesheet/analytics/datepicker.css'			=> 'DIR_APPLICATION.\'view/stylesheet/analytics/datepicker.css\'',
+'admin/view/stylesheet/analytics/grid.css'					=> 'DIR_APPLICATION.\'view/stylesheet/analytics/grid.css\'',
+'admin/view/stylesheet/analytics/analytics.min.css'				=> 'DIR_APPLICATION.\'view/stylesheet/analytics/analytics.min.css\'',
+'system/library/analytics/gapi.php' 						=> 'DIR_SYSTEM.\'library/analytics/gapi.php\'',
+'system/library/analytics/gapi.cache.php' 					=> 'DIR_SYSTEM.\'library/analytics/gapi.cache.php\'',
+'system/library/analytics/gapi_countries.php' 				=> 'DIR_SYSTEM.\'library/analytics/gapi_countries.php\'',
+'system/library/analytics/metadata.json' 					=> 'DIR_SYSTEM.\'library/analytics/metadata.json\'',
+);

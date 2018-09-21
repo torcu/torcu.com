@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "torcu.com"
+AuthUserFile /xampp/htdocs/updater/priv/.htpasswd
+Require valid-user
+

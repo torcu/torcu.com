@@ -1,0 +1,18 @@
+<b>UPGRADING</b>
+---------
+Upgrade from previous versions doesn't require reinstallation
+Just copy the new files to their respective location
+
+<b>CHANGE NOTES</b>
+
+------ 4/26/2016 - v2.2 ------
+- texts in the labels now shrink if neccesary to fit within the label
+- {comment} field now wrap within the label if neccesary
+- improved RTL languages rendering on {shipping_address} and {comment}
+
+------ 2/12/2016 - v2.1 -----
+- custom fields now available as {custom_field_N} beign N the number of the custom field
+- small bugfixes
+
+------ 6/5/2014 - v2.0 ------
+- opencart2 initial release

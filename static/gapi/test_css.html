@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title> - jsFiddle demo</title>
+ 
+  <style type='text/css'>
+    #tcom_DIV_1 {
+    box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 1px 0px;
+    box-sizing: border-box;
+    color: rgb(51, 51, 51);
+    height: 196px;
+    text-decoration: none solid rgb(51, 51, 51);
+    width: 940px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(188, 232, 241);
+    border-radius: 4px 4px 4px 4px;
+    font: normal normal normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0px 0px 20px;
+    outline: rgb(51, 51, 51) none 0px;
+}/*#tcom_DIV_1*/
+
+#tcom_DIV_2 {
+    box-sizing: border-box;
+    color: rgb(49, 112, 143);
+    height: 144px;
+    text-decoration: none solid rgb(49, 112, 143);
+    width: 938px;
+    background: rgb(217, 237, 247) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-top: 0px none rgb(188, 232, 241);
+    border-right: 0px none rgb(188, 232, 241);
+    border-bottom: 1px solid rgb(188, 232, 241);
+    border-left: 0px none rgb(188, 232, 241);
+    border-radius: 3px 3px 0 0;
+    font: normal normal normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(49, 112, 143) none 0px;
+    padding: 10px 15px;
+}/*#tcom_DIV_2*/
+
+#tcom_DIV_3 {
+    box-sizing: border-box;
+    color: rgb(49, 112, 143);
+    height: 123px;
+    text-decoration: none solid rgb(49, 112, 143);
+    width: 938px;
+    border: 0px none rgb(49, 112, 143);
+    font: normal normal normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0px -15px;
+    outline: rgb(49, 112, 143) none 0px;
+}/*#tcom_DIV_3*/
+
+#tcom_DIV_3:after {
+    box-sizing: border-box;
+    clear: both;
+    color: rgb(49, 112, 143);
+    display: table;
+    text-decoration: none solid rgb(49, 112, 143);
+    width: 1px;
+    content: ' ';
+    border: 0px none rgb(49, 112, 143);
+    font: normal normal normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(49, 112, 143) none 0px;
+}/*#tcom_DIV_3:after*/
+
+#tcom_DIV_3:before {
+    box-sizing: border-box;
+    color: rgb(49, 112, 143);
+    display: table;
+    text-decoration: none solid rgb(49, 112, 143);
+    width: 1px;
+    content: ' ';
+    border: 0px none rgb(49, 112, 143);
+    font: normal normal normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(49, 112, 143) none 0px;
+}/*#tcom_DIV_3:before*/
+
+#tcom_DIV_4 {
+    box-sizing: border-box;
+    color: rgb(49, 112, 143);
+    float: left;
+    height: 71px;
+    min-height: 1px;
+    position: relative;
+    text-decoration: none solid rgb(49, 112, 143);
+    width: 469px;
+    border: 0px none rgb(49, 112, 143);
+    font: normal normal normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(49, 112, 143) none 0px;
+    padding: 0px 15px;
+}/*#tcom_DIV_4*/
+
+#tcom_I_5 {
+    box-sizing: border-box;
+    color: rgb(49, 112, 143);
+    text-decoration: none solid rgb(49, 112, 143);
+    border: 0px none rgb(49, 112, 143);
+    font: normal normal normal 70px/normal FontAwesome;
+    outline: rgb(49, 112, 143) none 0px;
+}/*#tcom_I_5*/
+
+#tcom_I_5:before {
+    box-sizing: border-box;
+    color: rgb(49, 112, 143);
+    display: inline-block;
+    height: 71px;
+    speak: none;
+    text-decoration: none solid rgb(49, 112, 143);
+    width: 65px;
+    content: '?';
+    border: 0px none rgb(49, 112, 143);
+    font: normal normal normal 70px/normal FontAwesome;
+    outline: rgb(49, 112, 143) none 0px;
+}/*#tcom_I_5:before*/
+
+#tcom_DIV_6 {
+    box-sizing: border-box;
+    color: rgb(49, 112, 143);
+    float: left;
+    height: 123px;
+    min-height: 1px;
+    position: relative;
+    text-align: right;
+    text-decoration: none solid rgb(49, 112, 143);
+    width: 469px;
+    border: 0px none rgb(49, 112, 143);
+    font: normal normal normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(49, 112, 143) none 0px;
+    padding: 0px 15px;
+}/*#tcom_DIV_6*/
+
+#tcom_P_7 {
+    box-sizing: border-box;
+    color: rgb(49, 112, 143);
+    height: 47px;
+    text-align: right;
+    text-decoration: none solid rgb(49, 112, 143);
+    width: 439px;
+    border: 0px none rgb(49, 112, 143);
+    font: normal normal 500 36px/39.599998474121094px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 20px 0px 10px;
+    outline: rgb(49, 112, 143) none 0px;
+}/*#tcom_P_7*/
+
+#tcom_BIG_8 {
+    box-sizing: border-box;
+    color: rgb(49, 112, 143);
+    text-align: right;
+    text-decoration: none solid rgb(49, 112, 143);
+    border: 0px none rgb(49, 112, 143);
+    font: normal normal 500 43px/47.52000045776367px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(49, 112, 143) none 0px;
+}/*#tcom_BIG_8*/
+
+#tcom_P_9 {
+    box-sizing: border-box;
+    color: rgb(49, 112, 143);
+    height: 26px;
+    text-align: right;
+    text-decoration: none solid rgb(49, 112, 143);
+    width: 439px;
+    border: 0px none rgb(49, 112, 143);
+    font: normal normal 500 24px/26.399999618530273px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 20px 0px 10px;
+    outline: rgb(49, 112, 143) none 0px;
+}/*#tcom_P_9*/
+
+#tcom_SMALL_10 {
+    box-sizing: border-box;
+    color: rgb(153, 153, 153);
+    text-align: right;
+    text-decoration: none solid rgb(153, 153, 153);
+    border: 0px none rgb(153, 153, 153);
+    font: normal normal normal 16px/15.600000381469727px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(153, 153, 153) none 0px;
+}/*#tcom_SMALL_10*/
+
+#tcom_SMALL_11 {
+    box-sizing: border-box;
+    color: rgb(153, 153, 153);
+    text-align: right;
+    text-decoration: none solid rgb(153, 153, 153);
+    border: 0px none rgb(153, 153, 153);
+    font: normal normal normal 10px/10.140000343322754px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(153, 153, 153) none 0px;
+}/*#tcom_SMALL_11*/
+
+#tcom_A_12 {
+    background-position: 0px 0px;
+    box-sizing: border-box;
+    color: rgb(66, 139, 202);
+    text-decoration: none solid rgb(66, 139, 202);
+    background: rgba(0, 0, 0, 0) none repeat scroll 0px 0px / auto padding-box border-box;
+    border: 0px none rgb(66, 139, 202);
+    font: normal normal normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(66, 139, 202) none 0px;
+}/*#tcom_A_12*/
+
+#tcom_DIV_13 {
+    box-sizing: border-box;
+    color: rgb(66, 139, 202);
+    height: 50px;
+    text-decoration: none solid rgb(66, 139, 202);
+    width: 938px;
+    background: rgb(245, 245, 245) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-top: 1px solid rgb(221, 221, 221);
+    border-right: 0px none rgb(66, 139, 202);
+    border-bottom: 0px none rgb(66, 139, 202);
+    border-left: 0px none rgb(66, 139, 202);
+    border-radius: 0 0 3px 3px;
+    font: normal normal normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(66, 139, 202) none 0px;
+    padding: 10px 15px;
+}/*#tcom_DIV_13*/
+
+#tcom_DIV_14 {
+    box-sizing: border-box;
+    color: rgb(66, 139, 202);
+    height: 29px;
+    text-decoration: none solid rgb(66, 139, 202);
+    width: 938px;
+    border: 0px none rgb(66, 139, 202);
+    font: normal normal normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0px -15px;
+    outline: rgb(66, 139, 202) none 0px;
+}/*#tcom_DIV_14*/
+
+#tcom_DIV_14:after {
+    box-sizing: border-box;
+    clear: both;
+    color: rgb(66, 139, 202);
+    display: table;
+    text-decoration: none solid rgb(66, 139, 202);
+    width: 1px;
+    content: ' ';
+    border: 0px none rgb(66, 139, 202);
+    font: normal normal normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(66, 139, 202) none 0px;
+}/*#tcom_DIV_14:after*/
+
+#tcom_DIV_14:before {
+    box-sizing: border-box;
+    color: rgb(66, 139, 202);
+    display: table;
+    text-decoration: none solid rgb(66, 139, 202);
+    width: 1px;
+    content: ' ';
+    border: 0px none rgb(66, 139, 202);
+    font: normal normal normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(66, 139, 202) none 0px;
+}/*#tcom_DIV_14:before*/
+
+#tcom_DIV_15 {
+    box-sizing: border-box;
+    color: rgb(66, 139, 202);
+    float: left;
+    height: 20px;
+    min-height: 1px;
+    position: relative;
+    text-decoration: none solid rgb(66, 139, 202);
+    width: 469px;
+    border: 0px none rgb(66, 139, 202);
+    font: normal normal normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(66, 139, 202) none 0px;
+    padding: 0px 15px;
+}/*#tcom_DIV_15*/
+
+#tcom_DIV_16 {
+    box-sizing: border-box;
+    color: rgb(66, 139, 202);
+    float: left;
+    height: 29px;
+    min-height: 1px;
+    position: relative;
+    text-align: right;
+    text-decoration: none solid rgb(66, 139, 202);
+    width: 469px;
+    border: 0px none rgb(66, 139, 202);
+    font: normal normal normal 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    outline: rgb(66, 139, 202) none 0px;
+    padding: 0px 15px;
+}/*#tcom_DIV_16*/
+
+#tcom_I_17 {
+    box-sizing: border-box;
+    color: rgb(66, 139, 202);
+    text-align: right;
+    text-decoration: none solid rgb(66, 139, 202);
+    border: 0px none rgb(66, 139, 202);
+    font: normal normal normal 28px/normal FontAwesome;
+    outline: rgb(66, 139, 202) none 0px;
+}/*#tcom_I_17*/
+
+  </style>
+  
+ <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">   
+ 
+<script type='text/javascript'>
+//<![CDATA[ 
+
+//]]>  
+</script>
+</head>
+<body>
+  <div id="tcom_DIV_1">
+	<div id="tcom_DIV_2">
+		<div id="tcom_DIV_3">
+			<div id="tcom_DIV_4">
+				<i class="fa fa-twitter fa-5x"></i>
+			</div>
+			<div id="tcom_DIV_6">
+				<p id="tcom_P_7">
+					<big id="tcom_BIG_8">45,358</big>
+				</p>
+				<p id="tcom_P_9">
+					<small id="tcom_SMALL_10"><small id="tcom_SMALL_11">+123 / +0.5%</small></small>
+				</p>
+			</div>
+		</div>
+	</div><a href="#" id="tcom_A_12"></a>
+	<div id="tcom_DIV_13">
+		<div id="tcom_DIV_14">
+			<div id="tcom_DIV_15">
+				View Mentions
+			</div>
+			<div id="tcom_DIV_16">
+				<i class="fa fa-arrow"></i>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+  
+</body>
+
+
+</html>
+

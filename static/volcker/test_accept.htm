@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta contentType="text/html; charset=UTF-8"/>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script type="text/javascript">
+		function sendform() {
+			am = ['m1','m2','m3','m4a','m4b','m5','m6a','m6b','m6c','m6d','m7a','m7b','m7c','m8'];
+			error2 = false;
+			error3 = false;
+			
+			for(i=0;i<am.length;i++) {
+				if((document.getElementById('res_'+am[i]).value == 'OK_COMMENTS' || document.getElementById('res_'+am[i]).value == 'KO') && document.getElementById('msg_'+am[i]).value ==""){
+					error2 = true;
+					document.getElementById('m_'+am[i]).className = "form-group has-error";
+				}else if(document.getElementById('res_'+am[i]).value == 'OK' && document.getElementById('msg_'+am[i]).value !=""){
+					error3 = true;
+					document.getElementById('m_'+am[i]).className = "form-group has-error";
+				}
+				else{
+					document.getElementById('m_'+am[i]).className = "form-group";
+				}
+			}
+						
+			if (!error2 && !error3) {
+			
+				var myform = document.getElementById("sendform");
+				var response = serialize(myform);
+				myform.action = 'mailto:manuel.marias@gruposantander.com; torcuato.tejada.rosillo@everis.com?subject=[Volcker sign off] Automated response from desk LARGO_RATES to 2015/09/25 metrics&body=' + response;
+	
+				//myform.elements[0].value = "This is an automated response generated from your answers to the form. Please do not modify before sending:\n\n-------RESPONSE\n" + response + "\n-------EOR" ;
+				myform.submit();
+
+				document.getElementById('sendb').className = "btn btn-primary hide";
+				document.getElementById('closeb').className = "btn btn-primary show";
+				//window.close();
+			}else {
+				if(error2){
+					alert('Please indicate rejection message')
+				}
+				if(error3){
+					alert('Please do not put a comment in an accepted metric')
+				}
+			}
+		}
+		function serialize(form) {
+		    var field, s = [];
+		    if (typeof form == 'object' && form.nodeName == "FORM") {
+		        var len = form.elements.length;
+		        for (i=0; i<len-1; i++) {
+		            field = form.elements[i];
+		            if (field.name && !field.disabled && field.type != 'file' && field.type != 'reset' && field.type != 'submit' && field.type != 'button') {
+		                if (field.type == 'select-multiple') {
+		                    for (j=form.elements[i].options.length-1; j>=0; j--) {
+		                        if(field.options[j].selected)
+		                            s[s.length] = field.name + "=" + field.options[j].value;
+		                    }
+		                } else if ((field.type != 'checkbox' && field.type != 'radio') || field.checked) {
+		                    s[s.length] = field.name + "=" + field.value;
+		                }
+		            }
+		        }
+		    }
+		    return s.join("%0A").replace(/\&/g, '(and)').replace(/%40/g, '@').replace(/'/g, '\'');
+		}
+		
+		function checkMetricsSelected(metrics){
+			var index;
+			console.log(metrics);
+			var metric_array = metrics.split("/");
+			console.log(metrics_array)
+			for (index = 0; index<metric_array.length; index++){
+				metric_value = document.getElementById(metric_array[index]).value;
+				if(metric_value == 0){
+					alert("You must select one option for the metric " + metric_value);
+					return;
+				}
+			}
+		}
+  	</script>
+ 		
+</head>
+<body>
+
+<noscript><font color="red"><big><b>Please open this document in a browser</b></big></font></noscript>
+
+<div class="container">
+
+<img  style="margin-top:10px;margin-bottom:30px;" src="data:image/jpeg;base64,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" />
+<br>
+  <form id="sendform" class="form-horizontal" action="" method="POST" enctype="text/plain">
+
+	<input type="hidden" name="Message" value="This is an automated response generated from your answers to the form. Please do not modify before sending">
+  	<input type="hidden" name="desk" value="LARGO_RATES">
+	<input type="hidden" name="Metrics_date" value="2015/09/25">
+	<input type="hidden" name="Cycle" value="1">
+  	
+	<!-- Form Name -->
+	<legend>LARGO_RATES - 2015/09/25</legend>
+
+		<div class='form-group' id='m_m1'><label class='col-md-1 control-label' for='textinput'>Risk and Position Limits and Usage</label><div class='col-md-3'><select id='res_m1' name='res_m1' class='form-control'><option value='OK'>Accept</option><option value='OK_COMMENTS'>Accept with comments</option><option value='KO'>Reject</option></select></div><div class='col-md-8'><input id='msg_m1' name='msg_m1' type='text' class='form-control input-md'></input></div></div><div class='form-group' id='m_m2'><label class='col-md-1 control-label' for='textinput'>Risk Factor Sensitivity </label><div class='col-md-3'><select id='res_m2' name='res_m2' class='form-control'><option value='OK'>Accept</option><option value='OK_COMMENTS'>Accept with comments</option><option value='KO'>Reject</option></select></div><div class='col-md-8'><input id='msg_m2' name='msg_m2' type='text' class='form-control input-md'></input></div></div><div class='form-group' id='m_m3'><label class='col-md-1 control-label' for='textinput'>VaR y Stress VaR</label><div class='col-md-3'><select id='res_m3' name='res_m3' class='form-control'><option value='OK'>Accept</option><option value='OK_COMMENTS'>Accept with comments</option><option value='KO'>Reject</option></select></div><div class='col-md-8'><input id='msg_m3' name='msg_m3' type='text' class='form-control input-md'></input></div></div><div class='form-group' id='m_m4a'><label class='col-md-1 control-label' for='textinput'>Comprehensive PL Attribution</label><div class='col-md-3'><select id='res_m4a' name='res_m4a' class='form-control'><option value='OK'>Accept</option><option value='OK_COMMENTS'>Accept with comments</option><option value='KO'>Reject</option></select></div><div class='col-md-8'><input id='msg_m4a' name='msg_m4a' type='text' class='form-control input-md'></input></div></div><div class='form-group' id='m_m4b'><label class='col-md-1 control-label' for='textinput'>Comprehensive PL by Risk Factor</label><div class='col-md-3'><select id='res_m4b' name='res_m4b' class='form-control'><option value='OK'>Accept</option><option value='OK_COMMENTS'>Accept with comments</option><option value='KO'>Reject</option></select></div><div class='col-md-8'><input id='msg_m4b' name='msg_m4b' type='text' class='form-control input-md'></input></div></div><div class='form-group' id='m_m5'><label class='col-md-1 control-label' for='textinput'>Inventory Turnover</label><div class='col-md-3'><select id='res_m5' name='res_m5' class='form-control'><option value='OK'>Accept</option><option value='OK_COMMENTS'>Accept with comments</option><option value='KO'>Reject</option></select></div><div class='col-md-8'><input id='msg_m5' name='msg_m5' type='text' class='form-control input-md'></input></div></div><div class='form-group' id='m_m6a'><label class='col-md-1 control-label' for='textinput'>Inventory Aging - Security Asset-Age Profile</label><div class='col-md-3'><select id='res_m6a' name='res_m6a' class='form-control'><option value='OK'>Accept</option><option value='OK_COMMENTS'>Accept with comments</option><option value='KO'>Reject</option></select></div><div class='col-md-8'><input id='msg_m6a' name='msg_m6a' type='text' class='form-control input-md'></input></div></div><div class='form-group' id='m_m6b'><label class='col-md-1 control-label' for='textinput'>Inventory Aging - Security Liability-Age Profile</label><div class='col-md-3'><select id='res_m6b' name='res_m6b' class='form-control'><option value='OK'>Accept</option><option value='OK_COMMENTS'>Accept with comments</option><option value='KO'>Reject</option></select></div><div class='col-md-8'><input id='msg_m6b' name='msg_m6b' type='text' class='form-control input-md'></input></div></div><div class='form-group' id='m_m6c'><label class='col-md-1 control-label' for='textinput'>Inventory Aging - Derivative Assets-Age Profile</label><div class='col-md-3'><select id='res_m6c' name='res_m6c' class='form-control'><option value='OK'>Accept</option><option value='OK_COMMENTS'>Accept with comments</option><option value='KO'>Reject</option></select></div><div class='col-md-8'><input id='msg_m6c' name='msg_m6c' type='text' class='form-control input-md'></input></div></div><div class='form-group' id='m_m6d'><label class='col-md-1 control-label' for='textinput'>Inventory Aging - Derivative Liability-Age Profile</label><div class='col-md-3'><select id='res_m6d' name='res_m6d' class='form-control'><option value='OK'>Accept</option><option value='OK_COMMENTS'>Accept with comments</option><option value='KO'>Reject</option></select></div><div class='col-md-8'><input id='msg_m6d' name='msg_m6d' type='text' class='form-control input-md'></input></div></div><div class='form-group' id='m_m7a'><label class='col-md-1 control-label' for='textinput'>Customer Facing Trade Ratios</label><div class='col-md-3'><select id='res_m7a' name='res_m7a' class='form-control'><option value='OK'>Accept</option><option value='OK_COMMENTS'>Accept with comments</option><option value='KO'>Reject</option></select></div><div class='col-md-8'><input id='msg_m7a' name='msg_m7a' type='text' class='form-control input-md'></input></div></div><div class='form-group' id='m_m7b'><label class='col-md-1 control-label' for='textinput'>Customer Facing Trade Ratios</label><div class='col-md-3'><select id='res_m7b' name='res_m7b' class='form-control'><option value='OK'>Accept</option><option value='OK_COMMENTS'>Accept with comments</option><option value='KO'>Reject</option></select></div><div class='col-md-8'><input id='msg_m7b' name='msg_m7b' type='text' class='form-control input-md'></input></div></div><div class='form-group' id='m_m7c'><label class='col-md-1 control-label' for='textinput'>Customer Facing Trade Ratios</label><div class='col-md-3'><select id='res_m7c' name='res_m7c' class='form-control'><option value='OK'>Accept</option><option value='OK_COMMENTS'>Accept with comments</option><option value='KO'>Reject</option></select></div><div class='col-md-8'><input id='msg_m7c' name='msg_m7c' type='text' class='form-control input-md'></input></div></div><div class='form-group' id='m_m8'><label class='col-md-1 control-label' for='textinput'>RENTD</label><div class='col-md-3'><select id='res_m8' name='res_m8' class='form-control'><option value='OK'>Accept</option><option value='OK_COMMENTS'>Accept with comments</option><option value='KO'>Reject</option></select></div><div class='col-md-8'><input id='msg_m8' name='msg_m8' type='text' class='form-control input-md'></input></div></div>
+	
+	<legend></legend>
+	<input type="hidden" name="EOR" value="1">
+	<input type="hidden" name="EOR" value="1">
+	<!-- Button -->
+		<div class="form-group">
+		  <label class="col-md-1 control-label" for="sendb"></label>
+		  <div class="col-md-11">
+		    <a id="sendb" name="sendb" style="width:240px" class="btn btn-primary show" onclick="sendform()">Send response</a>
+		    <a id="closeb" name="sendb" style="width:240px" class="btn btn-primary hide" onclick="window.close()">Response sent. Close window</a>
+		  </div>
+		</div>
+	</form>
+</div>
+</body>
+</html>
